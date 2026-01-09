@@ -13,7 +13,7 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-// Routes - Yeh line zaroori hai
+// Routes -
 app.use("/api/import", importRoutes);
 
 // Server Listen
