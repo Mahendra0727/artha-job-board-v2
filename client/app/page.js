@@ -6,8 +6,7 @@ export default function Home() {
   const [logs, setLogs] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const API_URL =
-    process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
+  const API_URL = "https://artha-backend-dv1h.onrender.com/api";
 
   const fetchData = async () => {
     try {
