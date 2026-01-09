@@ -13,6 +13,19 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "Artha Backend LIVE!",
+    status: "success",
+    mongodb: "Connected",
+    redis: "Connected",
+  });
+});
+
+app.get("/api/health", (req, res) => {
+  res.json({ status: "OK", timestamp: new Date().toISOString() });
+});
+
 // Routes -
 app.use("/api/import", importRoutes);
 
